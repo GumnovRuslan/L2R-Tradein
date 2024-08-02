@@ -1,0 +1,60 @@
+.card {
+    width: 302px;
+    height: 395px;
+
+    &__inner {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 0 10px 5px #e4e3e3;
+
+        &:hover > .card__content > .card__brands {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    }
+
+    &__content {
+        position: relative;
+        display: flex;
+        height: 305px;
+    }
+
+    &__brands {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: 0.5s;
+        pointer-events: none;
+        background: #00000082;
+    }
+
+    &__brands-inner {
+        width: 100%;
+        max-width: 192px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+    }
+
+    &__description {
+        flex: content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__description-text {
+        font-size: 16px;
+        font-weight: 700;
+    }
+}

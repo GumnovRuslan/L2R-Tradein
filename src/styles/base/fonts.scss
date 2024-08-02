@@ -1,0 +1,25 @@
+$path: './../../fonts/Halcom-';
+
+@font-face {
+  font-family: 'Halcom';
+  src: url($path + 'extraBold.woff2') format('woff2');
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'Halcom';
+  src: url($path + 'bold.woff2') format('woff2');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Halcom';
+  src: url($path + 'medium.woff2') format('woff2');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Halcom';
+  src: url($path + 'regular.woff2') format('woff2');
+  font-weight: 400;
+}

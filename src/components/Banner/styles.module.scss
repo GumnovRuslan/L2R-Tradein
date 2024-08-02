@@ -1,0 +1,13 @@
+.banner {
+  margin: 100px 0;
+
+  &__inner {
+    display: flex;
+  }
+
+  &__image-wrapper {
+    position: relative;
+    height: 432px;
+    width: 100%;
+  }
+}

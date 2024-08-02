@@ -1,0 +1,20 @@
+:root {
+  --color-white: #ffffff;
+  --color-primary-500: #EFEFEF;
+  --color-primary-510: #EBEBEB;
+  --color-primary-600: #707070;
+  --color-primagy-700: #1DE9E1;
+  --color-black: #000000;
+
+  --color-text-primary: var(--color-black);
+  --color-text-secondary: var(--color-white);
+
+  --color-bg-black: var(--color-black);
+  --color-bg-primary: var(--color-white);
+  --color-bg-secondery: var(--color-primary-500);
+  --color-bg-main: var(--color-primagy-700);
+
+  --color-btn-primary: var(--color-black);
+  --color-btn-secondary: var(--color-primary-510)
+  
+}

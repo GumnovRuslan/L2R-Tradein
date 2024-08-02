@@ -1,0 +1,29 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 26px;
+  font-size: 16px;
+  font-weight: 700;
+  transition: 0.3s;
+
+  &.primary {
+    background: var(--color-btn-primary);
+    color: var(--color-text-secondary);
+  }
+
+  &.second {
+    background: var(--color-text-secondary);
+    color: var(--color-btn-primary);
+  }
+
+  &__hover-primary:hover {
+    background: var(--color-text-secondary);
+    color: var(--color-btn-primary);
+  }
+
+  &__hover-second:hover {
+    background: var(--color-btn-primary);
+    color: var(--color-text-secondary);
+  }
+}
