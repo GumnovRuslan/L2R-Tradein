@@ -1,6 +1,7 @@
 import styles from './styles.module.scss';
 import { Button } from '@/components/Button';
 import Image from 'next/image';
+import classnames from '@/utils/classnames';
 
 interface IProps {
   section?: 'full'
@@ -15,7 +16,7 @@ interface IProps {
 export function PriceTracker({image, height, section}: IProps) {
   return (
     <section className={`${styles['tracker']} ${section || ''}`}>
-      <div className={styles['tracker__inner']} style={{height: height}}>
+      <div className={classnames(styles.tracker__inner, image ? styles.tracker__secondary : '')}>
         {image && 
         <div className={styles['tracker__image-wrapper']} style={{width: image.width}}>
           <Image src='/image.jpg' alt='alt' fill={true} objectFit='cover'/>

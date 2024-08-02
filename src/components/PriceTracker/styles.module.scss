@@ -3,6 +3,10 @@
     display: flex;
   }
 
+  &__secondary {
+    height: 301px;
+  }
+
   &__image-wrapper {
     flex: 1 0 auto;
     position: relative;

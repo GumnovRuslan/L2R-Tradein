@@ -1,0 +1,46 @@
+.section {
+  padding: 30px 0;
+  border-bottom: 1px solid var(--color-bg-black);
+
+  &__name {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    cursor: pointer;
+  }
+
+  &__item_checkbox_false {
+    display: none;
+  }
+
+  &__item_checkbox_true {
+    width: 22px;
+    height: 22px;
+    border: 1px solid var(--color-bg-black);
+    background: var(--color-bg-white);
+  }
+
+  &__item_text {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+  }
+}
+
+.checked {
+  background: var(--color-bg-main);
+}
+
