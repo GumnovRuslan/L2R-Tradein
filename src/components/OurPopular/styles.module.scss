@@ -1,0 +1,24 @@
+.popular {
+  margin: 100px 0;
+  padding: 108px 50px;
+  background: var(--color-bg-third);
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    gap: 71px;
+    transform: translateX(calc(-100px));
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 375px);
+    gap: 19px;
+  }
+
+  &__title {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 50px;
+    color: var(--color-text-primary);
+  }
+}

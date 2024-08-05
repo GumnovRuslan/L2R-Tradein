@@ -18,7 +18,7 @@
         padding: 0 22px;
         height: 90px;
         transition: 0.5s;
-        box-shadow: 0 0 10px 5px #c7c6c6;
+        box-shadow: var(--shadow-default);
         background: var(--color-bg-primary);
     }
 

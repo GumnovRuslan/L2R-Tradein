@@ -1,8 +1,18 @@
+.page {
+  margin: 160px 0 0;
+}
+
 .catalog {
   width: max-content;
   display: flex;
-  gap: 47px;
+  flex-direction: column;
+  gap: 55px;
   margin: 150px auto 100px;
+
+  &__content {
+    display: flex;
+    gap: 47px;
+  }
 
   &__filter {
     flex: 1 0 auto;

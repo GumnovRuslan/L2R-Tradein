@@ -1,0 +1,18 @@
+.slider {
+
+  &__inner {
+    width: 100%;
+    max-width: 710px;
+    aspect-ratio: 1/1;
+    background: gray;
+  }
+
+  &__image_wrapper {
+    position: relative;
+    left: 32px;
+    top: 47px;
+    width: 100%;
+    max-width: 600px;
+    aspect-ratio: 1/1;
+  }
+}

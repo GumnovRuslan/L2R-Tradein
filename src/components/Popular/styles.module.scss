@@ -20,7 +20,8 @@ $step: $card-width + $card-gap;
 
   &__categories {
     position: relative;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 302px);
     gap: $card-gap;
 
     &:hover {

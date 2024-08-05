@@ -1,0 +1,39 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 15px 20px;
+  background: var(--color-bg-secondery);
+
+  &_primary {
+    background: var(--color-bg-main);
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+    justify-content: center;
+  }
+
+  &__text {
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--color-text-primary);
+  }
+
+  &__image_wrapper {
+    position: relative;
+    max-width: 100px;
+    margin: 0 auto;
+  }
+
+  &__btn {
+    flex: 1 0 auto;
+    font-size: 22px;
+    height: 52px;
+  }
+}

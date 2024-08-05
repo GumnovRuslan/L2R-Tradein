@@ -1,0 +1,30 @@
+.search {
+  padding: 33px;
+  background: var(--color-bg-main);
+  
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+  }
+
+  &__title {
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--color-text-primary);
+  }
+
+  &__description {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+
+  }
+
+  &__input {
+    padding: 13px 10px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+  }
+}

@@ -1,0 +1,27 @@
+.breadcrumbs {
+
+  &__paths {
+    display: flex;
+  }
+
+  &__path {
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.2s;
+    color: var(--color-text-primary);
+
+    &::after {
+      content: '/';
+    }
+
+    &:hover {
+      color: var(--color-bg-main)
+    }
+  }
+
+  &__title {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--color-text-primary);
+  }
+}

@@ -40,7 +40,7 @@ export function Header() {
             <nav className={styles["header__nav"]}>
               {data.categories.map((el, i) => 
               <Link 
-                href="/catalog" 
+                href={`/catalog/${el.title.toLowerCase()}`} 
                 className={`${styles["header__link"]} ${selectedLink === i+1 && styles['header__link--select']}`} 
                 key={i} 
                 onMouseEnter={() => openMenu(++i)}

@@ -1,6 +1,5 @@
 .card {
-    width: 302px;
-    height: 395px;
+    width: 100%;
 
     &__inner {
         height: 100%;
@@ -17,7 +16,7 @@
     &__content {
         position: relative;
         display: flex;
-        height: 305px;
+        aspect-ratio: 1/1;
     }
 
     &__brands {
@@ -51,6 +50,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 20px;
+        min-height: 90px;
+        background: var(--color-bg-primary);
     }
 
     &__description-text {
