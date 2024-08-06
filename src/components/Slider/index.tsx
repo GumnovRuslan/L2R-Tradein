@@ -6,9 +6,9 @@ import { Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { CardCategory } from '../Cards/Category';
 import { ChevronLeft, ChevronRight } from '../Icons';
+import { NavButton } from './SliderNavBtn';
 
 import 'swiper/scss';
-// import 'swiper/css/navigation';
 
 interface IProps {
   title?: string

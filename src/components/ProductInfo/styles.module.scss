@@ -6,7 +6,7 @@
   &__inner {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 60px;
   }
 
   &__title {
@@ -15,8 +15,6 @@
     font-weight: 800;
     line-height: 30px;
   }
-
-
 }
 
 .feature {
@@ -63,22 +61,22 @@
 }
 
 .characteristics {
+
   &__items {
-    // display: flex;
-    // flex-direction: column;
-    // flex-wrap: wrap;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, max-content);
+    display: flex;
     column-gap: 58px;
-    row-gap: 40px;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
   }
 
   &__item {
     padding: 33px 21px;
-    // height: max-content;
-    // max-width: 40%;
-    background: var(--color-bg-secondery);
+    height: max-content;
+    background: var(--color-bg-secondary);
   }
 
   &__item_title {
@@ -104,12 +102,14 @@
     width: 340px;
     font-size: 15px;
     font-weight: 800;
+    color: var(--color-text-primary);
   }
 
   &__line_text {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 500;
     line-height: 24px;
+    color: var(--color-text-primary);
   }
 }
 

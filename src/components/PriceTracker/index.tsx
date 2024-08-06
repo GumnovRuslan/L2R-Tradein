@@ -11,9 +11,12 @@ interface IProps {
     width: string
   }
   height?: string
+  model?: string
+  description?: string
 }
 
-export function PriceTracker({image, height, section}: IProps) {
+export function PriceTracker({image, height, section, model, description}: IProps) {
+  const descriptionDef = description ?? 'Track the price of your device with ongoing updates'
   return (
     <section className={`${styles['tracker']} ${section || ''}`}>
       <div className={classnames(styles.tracker__inner, image ? styles.tracker__secondary : '')}>
@@ -25,13 +28,15 @@ export function PriceTracker({image, height, section}: IProps) {
           <div className={styles['tracker__header']}>
             <p className={styles['tracker__title']}>Price Tracker.</p>
             <p className={styles['tracker__description']}>Track the price of your device with ongoing updates</p>
+            {model && <p className={styles.tracker__model}>{model}</p>}
           </div>
-          <form className={styles['tracker__form']}>
-            <input type="text" className={styles['tracker__input']} placeholder='Search Make/Model'/>
-            <input type="mail" className={styles['tracker__input']} placeholder='Email'/>
-            <input type="text" className={styles['tracker__input']} placeholder='Mobile'/>
+          <form className={styles.tracker__form}>
+            {!model && <input type="text" className={styles.tracker__input} placeholder='Search Make/Model'/>}
+            <input type="mail" className={styles.tracker__input} placeholder='Email'/>
+            <input type="text" className={styles.tracker__input} placeholder='Mobile'/>
             <Button type='primary'>Track</Button>
           </form>
+          {model && <a href="#" className={styles.tracker__another}>Track another device?</a>}
         </div>
       </div>
     </section>

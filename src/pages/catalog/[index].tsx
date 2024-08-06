@@ -1,5 +1,5 @@
 import Layout from "@/components/Layout";
-import CatalogPage from "@/containers/DeviceType";
+import CatalogPage from "@/containers/Catalog";
 
 const CatalogPageSSR = () => {
   return (
