@@ -1,12 +1,12 @@
 'use client'
 
 import styles from './styles.module.scss'
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import { Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { CardCategory } from '../Cards/Category';
 import { ChevronLeft, ChevronRight } from '../Icons';
-import { NavButton } from './SliderNavBtn';
+import { NavigationOptions } from 'swiper/types';
 
 import 'swiper/scss';
 
@@ -18,7 +18,7 @@ interface IProps {
 const slides = Array.from({length: 8})
 
 export function Slider({title}: IProps) {
-  const sliderNav = {
+  const navigation = {
     prev: useRef(null),
     next: useRef(null),
   }
@@ -30,11 +30,11 @@ export function Slider({title}: IProps) {
         <div className={styles['slider__swiper-wrapper']}>
           <Swiper
             className='swiper'
-            onSwiper={(swiper) => {
-              swiper.params.navigation.prevEl = sliderNav.prev.current;
-              swiper.params.navigation.nextEl = sliderNav.next.current;
-              swiper.navigation.init();
-              swiper.navigation.update();
+            onBeforeInit={(swiper) => {
+              if (swiper.params.navigation) {
+                (swiper.params.navigation as NavigationOptions).prevEl = navigation.prev.current;
+                (swiper.params.navigation as NavigationOptions).nextEl = navigation.next.current;
+              }
             }}
             modules={[Navigation]}
             slidesPerView={'auto'}
@@ -44,8 +44,8 @@ export function Slider({title}: IProps) {
           </Swiper>
         </div>
 
-        <button type='button' ref={sliderNav.prev} className={styles['swiper__prev']}><ChevronLeft/></button>
-        <button type='button' ref={sliderNav.next} className={styles['swiper__next']}><ChevronRight/></button>
+        <button type='button' ref={navigation.prev} className={styles['swiper__prev']}><ChevronLeft/></button>
+        <button type='button' ref={navigation.next} className={styles['swiper__next']}><ChevronRight/></button>
       </div>
     </section>
   )

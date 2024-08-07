@@ -8,8 +8,8 @@ const columns = ['Mobile', 'Tablets', 'Wearables',]
 const brands: string[] = ['all', 'apple', 'samsung']
 
 export function Popular() {
-  let [idCard, setIdCard] = useState(0)
-  let thumb = useRef(null)
+  const [idCard, setIdCard] = useState(0)
+  const thumb = useRef<null | HTMLDivElement>(null)
 
   if (idCard > -1 && thumb.current) {
     thumb.current.style.transform = `translateX(${((302 - 157) / 2) + ((302 + 16) * idCard)}px)`

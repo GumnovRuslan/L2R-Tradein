@@ -9,7 +9,7 @@ export function PopularCategories() {
       <div className={styles.popular__inner}>
         <h2 className={styles.popular__title}>Our <br/> Most Loved <br/> Categories</h2>
         <div className={styles.popular__items}>
-          {cards.map((_, i) => <CardCategory brands={['Apple', 'Samsung']}/>)}
+          {cards.map((_, i) => <CardCategory brands={['Apple', 'Samsung']} key={i}/>)}
         </div>
       </div>
     </section>

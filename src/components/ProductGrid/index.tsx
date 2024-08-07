@@ -12,7 +12,6 @@ interface IProps {
 }
 
 export function ProductGrid({products}: IProps) {
-  console.log(products)
   return (
     <section className={`full ${styles['grid']}`}>
       <div className={styles['grid__inner']}>

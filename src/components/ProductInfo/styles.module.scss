@@ -1,9 +1,16 @@
+$delay: 0.8s;
+
 .info {
-  margin: 100px auto;
-  max-width: 1400px;
+  position: relative;
+  z-index: 0;
+  padding: 100px 0;
+  box-shadow: var(--shadow-default);
   background: var(--color-bg-primary);
 
   &__inner {
+    margin: 0 auto;
+    max-width: 1400px;
+
     display: flex;
     flex-direction: column;
     gap: 60px;
@@ -18,11 +25,14 @@
 }
 
 .feature {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 290px;
-  background: var(--color-bg-black);
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 290px;
+    background: var(--color-bg-black);
+  }
 
   &__items {
     flex: 100%;
@@ -58,9 +68,38 @@
     font-size: 14px;
     font-weight: 800;
   }
+
+  &__info_button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 15px;
+    border-top: 1px solid var(--color-bg-primary);
+    color: var(--color-text-secondary);
+    background: var(--color-bg-black);
+  }
+
+  &__info_button_text {
+    font-size: 18px;
+    font-weight: 800;
+  }
+
+  &__info_button_icon {
+    transition: $delay;
+    max-width: 20px;
+    max-height: 20px;
+  }
 }
 
 .characteristics {
+  transition: $delay;
+  overflow: hidden;
+
+
+  &__inner {
+    padding: 50px 0;
+  }
 
   &__items {
     display: flex;

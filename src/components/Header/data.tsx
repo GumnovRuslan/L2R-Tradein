@@ -1,4 +1,4 @@
-export default {
+const data = {
   categories: [
     {
       title: 'Mobile',
@@ -38,3 +38,5 @@ export default {
     'Sony',
   ]
 }
+
+export default data

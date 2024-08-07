@@ -1,27 +1,22 @@
 .product {
-  padding: 100px 0;
+  position: relative;
+  z-index: 1;
+  padding: 150px 0 100px;
   box-shadow: var(--shadow-default);
   background: var(--color-bg-primary);
 
   &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
     max-width: 1400px;
     margin: 0 auto;
+  }
+
+  &__content {
     display: grid;
     grid-template-columns: 710px 1fr;
     column-gap: 28px;
     row-gap: 30px;
-  }
-
-  &__prices_title {
-    margin-top: 15px;
-    font-size: 28px;
-    font-weight: 800;
-    grid-column: 1 / 3;
-    color: var(--color-text-primary);
-  }
-
-  &__prices {
-    display: flex;
-    gap: 10px;
   }
 }

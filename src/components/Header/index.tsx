@@ -54,7 +54,7 @@ export function Header() {
           </div>
           
           <span className={styles["header__logo"]}>
-            <a href="/" className={styles['header__logo-inner']}></a>
+            <Link href="/" className={styles['header__logo-inner']}></Link>
           </span>
 
           <div className={styles['header__icons']}>
