@@ -1,39 +1,40 @@
 'use client'
-
 import styles from './styles.module.scss'
-import classnames from '@/utils/classnames'
 import { useState } from 'react'
 import { SurveyItem } from './SurveyItem'
 
 interface IProps {
   model: string
-
 }
 
 const questions = [
   {
-    text: 'Have you removed your Google account from this device?',
-    answer: ''
+    question: 'Have you removed your Google account from this device?',
+    answer: [{text: 'yes'}, {text: 'no'}]
   },
   {
-    text: 'Please select your network',
-    answer: ''
+    question: 'Please select your network',
+    answer: [{icon: '/image.jpg', text: 'blabla0'}, 
+      {icon: '/image.jpg', text: 'blabla1'}, 
+      {icon: '/image.jpg', text: 'blabla2'},
+      {icon: '/image.jpg', text: 'blabla3'},
+      {icon: '/image.jpg', text: 'blabla4'}]
   },
   {
-    text: 'Is the device fully functional?',
-    answer: ''
+    question: 'Is the device fully functional?',
+    answer: [{text: 'yes'}, {text: 'no'}]
   },
   {
-    text: 'Does the device have any physical damage?',
-    answer: ''
+    question: 'Does the device have any physical damage?',
+    answer: [{text: 'yes'}, {text: 'no'}]
   },
   {
-    text: 'Is the device water damaged?',
-    answer: ''
+    question: 'Is the device water damaged?',
+    answer: [{text: 'yes'}, {text: 'no'}]
   },
   {
-    text: 'Does the device show signs of screen burn, missing or faded pixels? Does the device show signs of screen burn, missing or faded pixels?',
-    answer: ''
+    question: 'Does the device show signs of screen burn, missing or faded pixels? Does the device show signs of screen burn, missing or faded pixels?',
+    answer: [{text: 'yes'}, {text: 'nosdfsdfsdfsdfsfasfasf'}]
   },
 ]
 
@@ -47,7 +48,7 @@ export function ProductSurvey({model}: IProps) {
         <form className={styles.survey__form}>
           <p className={styles.survey__subtitle}>If you’re ready, it’s time to ‘fess up with a few more details.</p>
           <div className={styles.survey__items}>
-            {questions.map((question, i) => <SurveyItem number={i+1} question={question.text} key={i}/>)}
+            {questions.map((question, i) => <SurveyItem isOpen={questionIdOpen == i} setIsOpen={() => setQuestionIdOpen(questionIdOpen == i ? null : i)} number={i+1} question={question.question} answers={question.answer} key={i}/>)}
           </div>
         </form>
       </div>

@@ -31,9 +31,9 @@ const data = {
     'Contact us',
   ],
   brands: [
-    'Apple',
     'LG',
     'Google',
+    'Apple',
     'Samsung',
     'Sony',
   ]

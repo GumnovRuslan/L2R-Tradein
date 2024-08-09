@@ -4,8 +4,12 @@ import styles from './styles.module.scss'
 import { ChevronLeft } from '@/components/Icons'
 import classnames from '@/utils/classnames'
 
-export function AccordionItem() {
-  const [isOpen, setIsOpen] = useState(false)
+interface IProps {
+  isOpen: boolean
+  setIsOpen: () => void
+}
+
+export function AccordionItem({isOpen, setIsOpen}: IProps) {
   const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -16,7 +20,7 @@ export function AccordionItem() {
 
   return (
     <div className={styles.item}>
-      <button className={styles.item__header} onClick={() => setIsOpen(!isOpen)}>
+      <button className={styles.item__header} onClick={() => setIsOpen()}>
         <p className={styles.item__header_name}>Apple iPhone Trade-In</p>
         <div className={classnames(styles.item__header_icon, isOpen ? styles.item__header_icon_open : '')}>
           <ChevronLeft/>

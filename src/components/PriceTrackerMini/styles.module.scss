@@ -1,0 +1,61 @@
+.tracker {
+  padding: 20px;
+  background: var(--color-bg-main);
+
+  &__inner {
+
+  }
+
+  &__header {
+    color: var(--color-text-primary);
+  }
+
+  &__title {
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 22px;
+    margin-bottom: 5px;
+  }
+
+  &__description {
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 15px;
+  }
+
+  &__model {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 20px;
+    margin-bottom: 15px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 8px 10px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 23px;
+    border-bottom: 2px solid var(--color-primary-600);
+  }
+
+  &__bottom {
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+  }
+
+  &__another {
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: underline;
+    color: var(--color-text-primary);
+  }
+}

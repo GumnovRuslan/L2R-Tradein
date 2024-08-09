@@ -43,11 +43,19 @@
     width: 100%;
     max-width: 155px;
     height: 60px;
-    background: var(--color-btn-secondary);
-
     font-weight: 800;
     text-transform: uppercase;
     font-size: 20px;
+    transition: 0.3s;
+    background: var(--color-btn-secondary);
+
+    &:hover {
+      background: var(--color-bg-main);
+    }
+
+    &_active {
+      background: var(--color-bg-main);
+    }
   }
 
   &__content {
@@ -76,17 +84,15 @@
     flex-direction: column;
   }
 
-  &__content-item {
+  &__content_item {
+    text-align: left;
     transition: 0.1s;
     padding: 5px 0;
     font-size: 14px;
     font-weight: 500;
+    background: transparent;
 
-    &:hover {
-      color: var(--color-bg-main);
-    }
-
-    &--select {
+    &_select {
       text-decoration: underline;
     }
   }

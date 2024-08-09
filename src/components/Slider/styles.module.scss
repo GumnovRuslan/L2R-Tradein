@@ -8,14 +8,20 @@
 
   &__title {
     max-width: 1608px;
-    margin: 0 auto;
+    margin: 0 auto 15px;
     transform: translateX(9px);
     font-size: 28px;
     font-weight: 800;
     color: var(--color-text-primary);
   }
 
-  &__swiper-wrapper {
+  &__wrapper {
+    position: relative;
+    max-width: 1800px;
+    margin: 0 auto;
+  }
+
+  &__swiper_wrapper {
     max-width: 1600px;
     margin: 0 auto;
   }
